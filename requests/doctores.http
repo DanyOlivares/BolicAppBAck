@@ -1,0 +1,81 @@
+
+@api=http://localhost:3000/Doctores
+@registry=http://localhost:3000/firstRegistry
+
+@prueba=http://localhost:3000/userprueba
+
+@medicines= http://localhost:3000/Medicamento 
+
+@tiempos= http://localhost:3000/tiempos
+
+GET {{prueba}}
+
+###
+
+GET {{api}}
+
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "correo": "fsfdfs@gmail.com",
+    "username": "sffsfs",
+    "contraseña" : "sffshg"
+}
+
+
+###
+GET {{api}}/1
+
+###
+DELETE {{api}}/2
+
+###
+GET {{api}}/count
+
+
+###
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "correo": "simiteeuneado@gmail.com",
+    "username": "saaa",
+    "contraseña" : "similon"
+}
+
+###
+POST {{registry}}
+Content-Type: application/json
+
+{
+  "username": "ejemplo2",
+  "password": "ejempl2",
+  "name": "sdsd",
+  "email": "ssvcxvf@correo.com",
+  "father": "vc",
+  "mother": "vfv",
+  "cellphone": "celvfvflphone",
+  "age": 30,
+  "weight": 70,
+  "height": 175,
+  "DrID": 1
+}
+
+### Medicina
+POST {{medicines}}
+Content-Type: application/json
+
+{
+  "medicine": "fenolftaleina"
+}
+
+
+###getMedicinas
+GET {{medicines}}
+
+
+###
+POST {{tiempos}}
